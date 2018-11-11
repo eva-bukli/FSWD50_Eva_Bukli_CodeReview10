@@ -25,7 +25,7 @@ include ('change_media.php');
               </select>
             </div>
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Select the author</label>
+              <label for="exampleFormControlSelect1">Select the publisher</label>
               <select name="selectp" class="form-control" id="exampleFormControlSelect1">
                 <?php 
                   $sql = "SELECT * FROM publish";
@@ -41,7 +41,7 @@ include ('change_media.php');
               <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Title">
             </div>
             <div class="form-group">
-              <label for="exampleFormControlInput1">Date of publishing</label>
+              <label for="exampleFormControlInput1">Year of publishing</label>
               <input type="number" name="date" class="form-control" id="exampleFormControlInput1" placeholder="Title">
             </div>
             <div class="form-group">
