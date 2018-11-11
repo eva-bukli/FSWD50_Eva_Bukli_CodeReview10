@@ -4,7 +4,9 @@ include ("connect.php");
 ?>
 
 <div class="container">
-  <div class="row justify-content-md-center">
+  <div class="row mt-4">
+<div class="col-lg-12">
+  
 
   	<?php
               $sql = "SELECT 
@@ -20,7 +22,7 @@ include ("connect.php");
             foreach ($rows as $row) { 
 
         ?>
-        <div class="col-lg-6 offset-lg-3 portfolio-item">
+        <div class="mt-4 mb-4">
             
           <form action='publisher.php' method='get' >
                 <button class=' btn btn-info' type='submit' name='pub' value=" <?php echo $row['publish_id']?>"><?php echo $row['publisher_name']?></button>
@@ -29,7 +31,7 @@ include ("connect.php");
         <?php 
                 }
 ?>
-</div>
+</div></div>
 </div> </div> 
 
 

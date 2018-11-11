@@ -17,7 +17,7 @@ if(isset ($_GET['id']) ){
               media.short_description,
               media.available,
               media.date,
-              media.type,
+              type.type_name,
               type.type_name,
               author.first_name,
               author.second_name,
@@ -38,7 +38,7 @@ if(isset ($_GET['id']) ){
 
 
         ?>
-        <div class="col-lg-6 portfolio-item">
+        <div class="col-lg-6 portfolio-item mt-4">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="<?php echo $row["img"]; ?>" alt=""></a>
             <div class="card-body">
