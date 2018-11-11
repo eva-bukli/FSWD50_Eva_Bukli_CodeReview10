@@ -3,6 +3,7 @@
             $title = $_POST['title'];
             $img = $_POST['img'];
             $desc = $_POST['desc'];
+            $date = $_POST['date'];
             $typeid = $_POST['typeid'];
             $avai = "available";
             $publish =$_POST['selectp'];
@@ -11,8 +12,8 @@
 
             //$autid = "SELECT author.author_id FROM author WHERE author.first_name = '$fname'";
 
-              $sql = "INSERT INTO media (title,img,short_description,type_id, available,author_id,publish_id)
-              VALUES ('$title', '$img', '$desc', '$typeid', '$avai',$author,$publish)
+              $sql = "INSERT INTO media (title,img,short_description,type_id, available,date, author_id,publish_id)
+              VALUES ('$title', '$img', '$desc', '$typeid', '$avai','$date','$author','$publish')
              ";
               if (mysqli_query($conn, $sql)) {
                  echo "<h2 class='mt-4'>Successfully uploaded</h2>";
@@ -71,8 +72,9 @@
             $desce = $_POST['desce'];
             $typeide = $_POST['typeide'];
             $isbne = $_POST['isbne'];
+            $date = $_POST['date'];
 
-            $sql = "UPDATE media SET title='$titlee', img='$imge', short_description='$desce', type_id='$typeide' WHERE ISBN_code='$isbne'";
+            $sql = "UPDATE media SET title='$titlee', img='$imge', short_description='$desce', date='$date',type_id='$typeide' WHERE ISBN_code='$isbne'";
             if (mysqli_query($conn, $sql)) {
                echo "<h2 class='mt-4'>Successfully updated</h2>";
             } else {
