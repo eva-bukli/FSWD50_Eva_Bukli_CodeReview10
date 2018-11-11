@@ -12,7 +12,7 @@ include ('change_media.php');
 
          <form class="" action="update4.php" method="POST"><h2>Edit</h2>
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Select ISBN code</label>
+              <label for="exampleFormControlSelect1">Select </label>
               <select name="isbne" class="form-control" id="exampleFormControlSelect1">
                 <?php 
           $sql = "SELECT * FROM media";
@@ -20,7 +20,7 @@ include ('change_media.php');
           $rows = $result->fetch_all(MYSQLI_ASSOC);
             foreach ($rows as $row) { 
         ?>
-                <option value=" <?php echo $row["ISBN_code"]; ?> "><?php echo $row["ISBN_code"]; ?></option><?php } ?>
+                <option value=" <?php echo $row["ISBN_code"]; ?> "><?php echo $row["ISBN_code"]." - ".$row["title"]; ?></option><?php } ?>
               </select>
             </div>
             <div class="form-group">
